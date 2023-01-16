@@ -8,10 +8,15 @@ use Magento\Catalog\Model\ResourceModel\Product as ProductResource;
 class ProductDeletePlugin
 {
     /**
-     * @var \Magento\Quote\Model\Product\QuoteItemsCleanerInterface
+     * @var DeletePublisher
      */
     private $productDeletePublisher;
 
+    /**
+     * __construct function
+     *
+     * @param DeletePublisher $productDeletePublisher
+     */
     public function __construct(
         DeletePublisher $productDeletePublisher
     ) {
